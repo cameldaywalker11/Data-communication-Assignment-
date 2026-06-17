@@ -1,4 +1,234 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Communication - Appiah Kubi Ishmael</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #0d0d0d;
+            --paper: #f5f0e8;
+            --amber: #c8860a;
+            --rust: #8b2500;
+            --sage: #3a5a40;
+            --cream: #faf7f0;
+            --mid: #6b5e4a;
+            --light: #e0e0d0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--mid);
+            margin-bottom: 4rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        nav a {
+            font-family: 'DM Mono', monospace;
+            text-decoration: none;
+            color: var(--ink);
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--amber);
+        }
+
+        #home {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 70vh;
+        }
+
+        .hero-left h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+
+        .hero-left p {
+            font-size: 1.2rem;
+            color: var(--mid);
+            margin-bottom: 3rem;
+            max-width: 500px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: 'DM Mono', monospace;
+            background-color: var(--ink);
+            color: var(--paper);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--amber);
+            transform: translateY(-2px);
+        }
+
+        .hero-right {
+            position: relative;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 500px;
+            background-color: var(--light);
+            border: 1px solid var(--mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image-container::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 1px solid var(--amber);
+            z-index: -1;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 6rem;
+            border-top: 1px solid var(--light);
+            padding-top: 3rem;
+        }
+
+        .stat-item .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--rust);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item .label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--mid);
+        }
+
+        @media (max-width: 768px) {
+            #home {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 1rem;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">DataCom.</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="home">
+            <div class="hero-left">
+                <h1>Appiah Kubi Ishmael</h1>
+                <p>Exploring the core principles of Data Communication, network topologies, and modern web architectures.</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-container">
+                    <div style="font-family: 'DM Mono', monospace; color: var(--mid); text-align: center; padding: 2rem;">
+                        [ Data Communication Assignment Portfolio ]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="number">01</div>
+                <div class="label">OSI Model Layering</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">02</div>
+                <div class="label">Network Protocols</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">03</div>
+                <div class="label">Data Transmission</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 
 
 
